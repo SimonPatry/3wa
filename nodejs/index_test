@@ -1,0 +1,32 @@
+const fs = require("fs");
+
+const data = fs.readFileSync("students.txt", "utf-8");
+
+// Construction du tableau d'objets
+let tab = data.split("\r\n").slice(1, -1);
+tab = tab.map((v) => {
+  let tab = v.trim().split(" ");
+  return { notes: tab[0], name: tab[1], address: tab[2] };
+});
+//console.log(tab);
+
+/*
+// Plus de 17 de moyenne
+tab.forEach((v) => {
+  if (v.notes > 17) console.log(v);
+});
+*/
+
+// Meilleure note
+console.log(
+  tab.reduce((prev, cur) => {
+    console.log(prev);
+    if (cur.notes > prev.notes) return cur;
+  }, (initialValue = { notes: 0 }))
+);
+
+/*
+// Ordonner le tableau par note
+tab = tab.sort((a, b) => a.notes - b.notes);
+console.log(tab);
+*/
