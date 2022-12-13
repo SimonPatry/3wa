@@ -1,0 +1,7 @@
+02 Exercice rechercher dans un fichier TP 01
+
+    Vous allez lire un fichier puis calculer la moyenne de chaque étudiant. Affichez le nom de l'étudiant, puis donner sa moyenne. Récupérez les données dans le dossier Data le fichier students.json.
+
+    Pensez à gérer le cas où l'on souhaite arrêter le processus. Ainsi que le fait que la recherche doit être insensible à la casse.
+
+    Gérez les exceptions/erreurs de saisi.
